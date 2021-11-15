@@ -20,6 +20,7 @@ class App extends Component {
             <Route path="/products" exact render={props => <Products sortBy="newest" {...props}/>}></Route>
             <Route path="/posts/:year?/:month?" exact component={Posts}></Route>
             <Route path="/admin" exact component={Dashboard}></Route>
+            <Redirect from="/messages" to="/posts"></Redirect>
             <Route path="/not-found" component={NotFound}></Route>
             <Route path="/" exact component={Home}></Route>
             <Redirect to="/not-found"></Redirect>
